@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f4f4;
+    margin-top: 80px;
+}
+
+.container {
+    width: 270px;
+    height: 600px;
+    background: linear-gradient(#8f8f8f, #1a1a1a 70%);
+    border-radius: 30px;
+}
+
+span.date {
+    color: #f8f8f8;
+    font-size: 32px;
+}
+
+span.month {
+    color: #676767;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+div.outer {
+    filter: blur(10px);
+    box-shadow: inset 0px 17px 0px 0px rgba(255, 255, 255, 0.11), 0px 20px 2px 10px rgba(0, 0, 0, 0.7), 0px 40px 0px 0px rgba(255, 255, 255, 0.071);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#6f6f6f, #4a4a4a 50%);
+}
+
+div.inner {
+    box-shadow: inset 0px 10px 10px 0px rgba(0, 0, 0, 0.333), inset 0px -10px 10px 0px rgba(7, 7, 7, 0.212);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(#6f6f6f, #3e3e3e);
+}
+
+div.mid-point {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    background: #5b5b5b;
+    box-shadow: 0px 3px 4px 0px black, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.071);
+}
+
+div.hour-hand {
+    width: 40px;
+    height: 7px;
+    background: #b994fe;
+    border-radius: 10px;
+    /*12pm = -90deg, rotate by 30deg for every hour 
+    and make sure rotate comes before translate
+    */
+    transform: rotate(300deg) translate(40px);
+    box-shadow: -5px 10px 15px 0px rgba(0, 0, 0, 0.9);
+}
+
+span.time {
+    font-size: 44px;
+    color: #f8f8f8;
+}
+
+span.ampm {
+    font-size: 10px;
+    color: #6a6a6a;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+span.dot {
+    color: #6f6f6f;
+}
+
+span.unlock {
+    color: #5f5f5f;
+    font-weight: 900;
+    font-size: 7px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+span.unlock::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #6c6c6c;
+    bottom: -11px;
+    left: 0px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+span.unlock::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #323232, #202020);
+    bottom: -10px;
+    left: 0px;
+}
